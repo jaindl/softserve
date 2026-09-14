@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Softserve poster</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..500,100&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Permanent+Marker&display=swap">
+<style>
+/* Softserve tokens */
+:root{--black:#000000;--cream:#ffffeb;--ink:#1a1a1a;--pink:#ffbaff;--mint:#c8ffba;--sky:#baffff;--peach:#ffc8ba;--lemon:#f1ffba;--ice:#ebffff;--blush:#ffebff;
+ --display:"Fraunces","Cooper Lt BT",Georgia,serif;--body:"Instrument Sans",system-ui,sans-serif;--marker:"Permanent Marker",cursive}
+*{box-sizing:border-box;margin:0}
+html,body{width:1080px;height:1350px;overflow:hidden;background:var(--black)}
+body{font-family:var(--body);-webkit-font-smoothing:antialiased}
+.poster{width:1080px;height:1350px;padding:96px 88px 150px;position:relative;display:none;flex-direction:column}
+.poster.on{display:flex}
+h1{font-family:var(--display);font-weight:400;font-variation-settings:"SOFT" 100,"opsz" 144;letter-spacing:-.025em;line-height:1.02;font-size:84px;text-wrap:balance}
+.tag{align-self:flex-start;font-size:24px;font-weight:600;padding:16px 30px;border-radius:200px;margin-bottom:48px}
+.lead{font-size:30px;font-weight:500;line-height:1.3;opacity:.72;max-width:26ch;margin-top:28px}
+.foot{position:absolute;left:88px;right:88px;bottom:72px;display:flex;justify-content:space-between;font-size:22px;font-weight:500;white-space:nowrap}
+.foot i{font-family:var(--display);font-style:italic;font-variation-settings:"SOFT" 100}
+
+/* hero: black ground, pink tag, screenshot */
+.hero{background:var(--black);color:var(--cream)}
+.hero .tag{background:var(--pink);color:var(--ink)}
+.hero .screen{margin-top:auto;background:#fff;color:var(--ink);border-radius:28px;padding:36px;font-size:28px;box-shadow:0 20px 60px rgba(0,0,0,.35);transform:rotate(-2deg)}
+.hero .screen b{font-weight:600}
+.hero .screen .bar{height:18px;border-radius:9px;background:var(--ice);margin-top:18px}
+.hero .screen img{width:100%;display:block;border-radius:16px}
+
+/* list: cream ground, black tag, white rows */
+.list{background:var(--cream);color:var(--ink)}
+.list .tag{background:var(--ink);color:var(--cream)}
+.list .rows{margin-top:44px;display:grid;gap:18px}
+.list .row{display:flex;gap:26px;align-items:flex-start;padding:26px 32px;border-radius:26px;background:#fff;border:1px solid rgba(26,26,26,.12);font-size:27px;line-height:1.25}
+.list .row b{display:block;font-weight:600}
+.list .row span{opacity:.72}
+.list .n{font-family:var(--marker);font-size:34px;min-width:48px;line-height:1.1}
+
+/* stat: pastel ground, cream tag, giant number */
+.stat{background:var(--mint);color:var(--ink)}
+.stat .tag{background:var(--cream);color:var(--ink)}
+.stat .num{font-family:var(--display);font-variation-settings:"SOFT" 100,"opsz" 144;font-size:230px;line-height:.95;letter-spacing:-.03em;margin-top:40px}
+</style></head><body>
+
+<!-- ===== HERO ===== -->
+<section class="poster hero" data-layout="hero">
+  <span class="tag">Small business + AI</span>
+  <h1>Most owners don't need a marketing team.</h1>
+  <p class="lead">They need a 2-hour weekend setup and a list of 8 prompts.</p>
+  <div class="screen">
+    <!-- Replace with a real capture: <img src="capture.png"> -->
+    <b>Claude</b> · weekend-setup.md
+    <div class="bar" style="width:80%"></div><div class="bar" style="width:55%;background:var(--blush)"></div><div class="bar" style="width:68%;background:var(--lemon)"></div>
+  </div>
+  <div class="foot"><span>MJ Jaindl</span><i>Personal Brand, AI, &amp; LinkedIn Growth</i></div>
+</section>
+
+<!-- ===== LIST ===== -->
+<section class="poster list" data-layout="list">
+  <span class="tag">Playbook</span>
+  <h1>The 4 files every owner should hand to AI</h1>
+  <div class="rows">
+    <div class="row"><span class="n">1</span><div><b>voice.md</b><span>How you actually talk. 20 real sentences.</span></div></div>
+    <div class="row"><span class="n">2</span><div><b>offer.md</b><span>What you sell, to whom, at what price.</span></div></div>
+    <div class="row"><span class="n">3</span><div><b>proof.md</b><span>Receipts. Numbers. Screenshots.</span></div></div>
+    <div class="row"><span class="n">4</span><div><b>anti.md</b><span>Everything you refuse to sound like.</span></div></div>
+  </div>
+  <div class="foot"><span>MJ Jaindl</span><i>Personal Brand, AI, &amp; LinkedIn Growth</i></div>
+</section>
+
+<!-- ===== STAT ===== -->
+<section class="poster stat" data-layout="stat">
+  <span class="tag">Receipt</span>
+  <h1>Followers in 14 months</h1>
+  <p class="num">57k</p>
+  <p class="lead">No ads. No ghostwriter. One workflow, run every morning at 6am.</p>
+  <div class="foot"><span>MJ Jaindl</span><i>Personal Brand, AI, &amp; LinkedIn Growth</i></div>
+</section>
+
+<script>
+// ?layout=hero|list|stat  (default hero)
+const l=new URLSearchParams(location.search).get('layout')||'hero';
+(document.querySelector(`[data-layout="${l}"]`)||document.querySelector('.poster')).classList.add('on');
+</script>
+</body></html>
