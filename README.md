@@ -3,7 +3,7 @@
 MJ Jaindl's visual identity (v2, Aug 2026) for LinkedIn infographics, carousels, posters, and lead-magnet pages.
 
 - Pure-black ground, cream + pastel palette
-- Fraunces Soft (headlines) + Instrument Sans (body)
+- Fraunces Soft (headlines) + Inter (body)
 - Three layouts: `hero` (the Black), `list` (the Cream), `stat` (the Mint)
 
 ## Files
