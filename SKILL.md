@@ -1,6 +1,6 @@
 ---
 name: softserve
-description: MJ's "Softserve" visual identity (v2, Aug 2026) — pure-black ground, his cream + pastel palette, Hotplate-style soft serif (Fraunces Soft) with Instrument Sans. Use whenever making ANY visual for MJ — LinkedIn infographic, carousel slide, poster, one-pager, lead-magnet PDF page, Substack header, slide deck, or any HTML that will be screenshotted — and when MJ says "softserve", "v2 style", "the new design", "hotplate style", or asks for something "in my style". Also load it when editing or reviewing an existing visual for brand consistency. (MJ's older v1 look — bold-caps Garamond, chalk underline, cream frame — is "Chalkboard"; only use that if he names it.)
+description: MJ's "Softserve" visual identity (v2, Aug 2026) — pure-black ground, his cream + pastel palette, Hotplate-style soft serif (Fraunces Soft) with Inter. Use whenever making ANY visual for MJ — LinkedIn infographic, carousel slide, poster, one-pager, lead-magnet PDF page, Substack header, slide deck, or any HTML that will be screenshotted — and when MJ says "softserve", "v2 style", "the new design", "hotplate style", or asks for something "in my style". Also load it when editing or reviewing an existing visual for brand consistency. (MJ's older v1 look — bold-caps Garamond, chalk underline, cream frame — is "Chalkboard"; only use that if he names it.)
 ---
 
 # Softserve — MJ's design system v2
@@ -30,12 +30,12 @@ Light surfaces on cream: card `#ffffff`, border `rgba(26,26,26,.12)`, muted text
 ```
 display  "Fraunces"  wght 300–400, font-variation-settings "SOFT" 100, "opsz" 144
          letter-spacing -0.02em (−0.025em on posters), line-height 1.02–1.05, SENTENCE CASE
-body     "Instrument Sans"  400 body · 500 lead/muted · 600 labels & tags
+body     "Inter"  400 body · 500 lead/muted · 600 labels & tags
 marker   "Permanent Marker"  hand notes only ("Step 1", list numerals). Max one note per slide.
 ```
 
 Google Fonts link (the only font host that works in Artifacts):
-`https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..500,100&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Permanent+Marker&display=swap`
+`https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..500,100&family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Permanent+Marker&display=swap`
 
 Fraunces is the stand-in for Hotplate's licensed Cooper Light BT. If MJ ever supplies Cooper, swap it in the `--display` stack.
 
